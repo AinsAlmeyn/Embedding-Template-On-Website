@@ -1,0 +1,60 @@
+﻿@model DefaultResponse
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@await Html.PartialAsync("/Views/Partials/_SliderPartial.cshtml")
+
+<br />
+
+<section class="features_teasers_wrapper">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model.IndexInfos)
+            {
+                <div class="feature_teaser col-sm-4 col-md-4">
+                    <img alt="responsive" src="@item.Icon">
+                    <h3>@item.Title</h3>
+                    <p>@item.Description</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section class="portfolio_teasers_wrapper">
+    <div class="container">
+        <h2 class="section_header fancy centered">Recent Work or Projects from Portfolio<small>we take pride in our work</small></h2>
+        <div class="portfolio_strict row">
+            @foreach (var item in Model.Portfolios)
+            {
+                <div class="col-sm-4 col-md-4">
+                    <div class="portfolio_item wow animated flipInX">
+                        <a href="/Gallery/GalleryDetail/@item.Id" data-path-hover="M 180,190 0,158 0,0 180,0 z">
+                            <figure style="background-image:url(@item.GalleryImage)">
+                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                    <path d="M 180,0 0,0 0,0 180,0 z" />
+                                </svg>
+                                <figcaption>
+                                    <p>@item.Description</p>
+                                    <div class="view_button">View</div>
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="portfolio_description">
+                            <h3><a href="/Gallery/GalleryDetail/@item.Id">@item.Title</a></h3>
+                            <p>@item.Category</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section class="clients_section wow animated fadeInUp">
+    <div class="container">
+        <h2 class="section_header elegant centered">Our clients<small>all of them are satisfied</small></h2>
+        <div class="clients_list"> <a href="#"><img src="~/images/clients/wordpress.jpg" alt="client"></a> <a href="#"><img src="~/images/clients/jquery.jpg" alt="client"></a> <a href="#"><img src="~/images/clients/microlancer.jpg" alt="client"></a> <a href="#"><img src="~/images/clients/bbpress.jpg" alt="client"></a> <a href="#"><img src="~/images/clients/wpml.jpg" alt="client"></a> </div>
+    </div>
+</section>

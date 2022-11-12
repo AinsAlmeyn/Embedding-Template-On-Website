@@ -1,0 +1,60 @@
+﻿@model GalleryResponse
+
+@{
+    ViewData["Title"] = "GalleryDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="hgroup">
+    <div class="container">
+        <h1>@Model.portfolio.Title</h1>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-8">
+                <section class="portfolio_slider_wrapper">
+                    <div class="flexslider" id="portfolio_slider">
+                        <ul class="slides">
+                            @foreach (var item in Model.slider)
+                            {
+                                <li class="item" data-thumb="@item.Images" style="background-image: url(@item.Images)">
+                                    <div class="container">
+                                        <a href="@item.Images" rel="prettyPhoto[gal]"></a>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div id="carousel" class="flexslider">
+                        <ul class="slides">
+                            @foreach (var item in Model.slider)
+                            {
+                                <li> <img src="@item.Images" alt=""> </li>
+                            }
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <article class="portfolio_details">
+                    <h2 class="section_header">@Model.portfolio.Title</h2>
+                    <p>@Model.portfolio.Description</p>
+                    <br>
+                    <br>
+                    <div>
+                        <p><strong>Date:</strong> @Model.portfolio.Date</p>
+                        <p><strong>Client:</strong> @Model.portfolio.Client</p>
+                        <p><strong>Category:</strong> @Model.portfolio.Category</p>
+                        <p><strong>Place:</strong> @Model.portfolio.Place</p>
+                        <p><strong>Rating:</strong><span class="rating r5"></span></p>
+                    </div>
+                    <br>
+                    <br>
+                    <a href="#" class="btn btn-danger center-block btn-lg">Visit Project Site</a>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

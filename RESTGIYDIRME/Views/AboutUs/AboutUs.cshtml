@@ -1,0 +1,41 @@
+﻿@model AboutUsResponse
+
+@{
+    ViewData["Title"] = "AboutUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="hgroup">
+    <div class="container">
+        <h1>About us</h1>
+    </div>
+</section>
+<section class="article-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-8">
+                <p class="columns_2">@Model.About.Description</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="team_members">
+    <div class="container">
+        <h2 class="section_header fancy centered">Meet our Team... <small>they are always up to something good!</small></h2>
+        <div class="row">
+            @foreach (var item in Model.Teams)
+            {
+                <div class="col-sm-6 col-md-3">
+                    <div class="team_member">
+                        <figure style="background-image: url(@item.Image)"><img src="@item.Category" alt="1a"></figure>
+                        <h5>@item.Name</h5>
+                        <small>@item.Title</small>
+                        <hr>
+                        <div class="team_social"> <a href="@item.LinkFace"><i class="fa fa-facebook"></i></a> <a href="@item.LinkTwitter"><i class="fa fa-twitter"></i></a> <a href="#pinterest"><i class="fa fa-linkedin"></i></a> <a href="@item.LinkLinkedin"><i class="fa fa-github-alt"></i></a> </div>
+                        <p class="short_bio">@item.Description</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

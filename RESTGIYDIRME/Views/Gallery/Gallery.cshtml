@@ -1,0 +1,47 @@
+﻿@model GalleryResponse
+
+@{
+    ViewData["Title"] = "Gallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="hgroup">
+    <div class="container">
+        <h1>Masonry portfolio <small>or</small> photo gallery</h1>
+        <h2>
+            This is a mixture of portfolio items and photo gallery! We are using the Isotope Jquery plugin to filter results and Prettyphoto to open the lighbox.
+            This is the<strong> Masonry Version</strong>, you should also check out the <a href="portfolio.html"><strong>strict version</strong></a>. All photos © by <a href="http://www.dimitragiannouka.com" target="_blank">Dimitra Giannouka</a>.
+        </h2>
+        <ul class="breadcrumb pull-right">
+            <li><a href="index.html">Home</a> </li>
+            <li class="active">Portfolio</li>
+        </ul>
+    </div>
+</section>
+
+<section class="portfolio_masonry">
+    <div class="container">
+        <div class="row isotope_portfolio_container">
+            @foreach (var item in Model.portfolios)
+            {
+                <div class="cat_projects col-sm-4 col-md-4">
+
+                    <div class="portfolio_item">
+                        <a href="GalleryDetail/@item.Id">
+                            <img src="@item.GalleryImage" alt="Title of the project">
+                            <div class="overlay">
+                                <div class="desc">
+                                    <i class="fa fa-external-link"></i>
+                                    <h3>@item.Title</h3>
+                                    <p>@item.Description</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            }
+        </div>
+    </div>
+</section>
