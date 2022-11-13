@@ -5,9 +5,9 @@ using RESTGIYDIRME.Models.EntityData;
 
 namespace RESTGIYDIRME.Models.EntityConfigurations
 {
-    public class PortfolioSliderConfigurations : IEntityTypeConfiguration<PortfolioSlider>
+    public class PortfolioSliderConfigurations : IEntityTypeConfiguration<PortfolioSliderEntity>
     {
-        public void Configure(EntityTypeBuilder<PortfolioSlider> builder)
+        public void Configure(EntityTypeBuilder<PortfolioSliderEntity> builder)
         {
             builder
                 .HasOne(x => x.Portfolio)

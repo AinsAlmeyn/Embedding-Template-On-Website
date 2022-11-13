@@ -12,7 +12,7 @@ namespace RESTGIYDIRME.Controllers
             var listTeams = c.Teams.ToList();
             var reAbout = c.Abouts.FirstOrDefault(x => x.Id == 1);
 
-            AboutUsResponse response = new()
+            AboutUsResponseModel response = new()
             {
                 About = reAbout,
                 Teams = listTeams

@@ -10,7 +10,7 @@ namespace RESTGIYDIRME.Controllers
         public IActionResult Referance()
         {
             var referances = c.Referances.ToList();
-            ReferanceResponse response = new()
+            ReferanceResponseModel response = new()
             {
                 Referances = referances
             };

@@ -13,7 +13,7 @@ namespace RESTGIYDIRME.Controllers
             var listSliderInfo = c.Sliders.ToList();
             var listPortfolioInfo = c.Portfolios.OrderByDescending(x => x.Date).ToList();
 
-            DefaultResponse response = new()
+            DefaultResponseModel response = new()
             {
                 Sliders = listSliderInfo,
                 Portfolios = listPortfolioInfo,

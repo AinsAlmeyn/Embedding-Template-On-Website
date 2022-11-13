@@ -2,9 +2,8 @@
 
 namespace RESTGIYDIRME.Models.ResponseObjects
 {
-    public class AboutUsResponse
+    public class GalleryResponseModel
     {
-        public About About;
-        public List<Team> Teams;
+        public List<PortfolioEntity> portfolios;
     }
 }

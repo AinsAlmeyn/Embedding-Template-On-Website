@@ -1,6 +1,6 @@
 ﻿namespace RESTGIYDIRME.Models.EntityData
 {
-    public class Referance
+    public class ReferanceEntity
     {
         public int Id { get; set; }
         public string Icon { get; set; }

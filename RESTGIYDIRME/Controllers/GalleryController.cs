@@ -10,7 +10,7 @@ namespace RESTGIYDIRME.Controllers
         public IActionResult Gallery()
         {
             var Portfolios = c.Portfolios.ToList();
-            GalleryResponse response = new()
+            GalleryResponseModel response = new()
             {
                 portfolios = Portfolios
             };
@@ -21,7 +21,7 @@ namespace RESTGIYDIRME.Controllers
         {
             var fPortfolio = c.Portfolios.FirstOrDefault(x => x.Id == id);
             var Sliders = c.PortfolioSliders.Where(x => x.PortId == id).ToList();
-            GalleryResponse response = new()
+            GalleryDetailResponseModel response = new()
             {
                 portfolio = fPortfolio,
                 slider = Sliders

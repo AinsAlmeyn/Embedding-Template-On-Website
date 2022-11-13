@@ -2,7 +2,7 @@
 
 namespace RESTGIYDIRME.Models.EntityData
 {
-    public class IndexInfo
+    public class IndexInfoEntity
     {
         public int Id { get; set; }
         public string Icon { get; set; }

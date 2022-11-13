@@ -5,9 +5,9 @@ using RESTGIYDIRME.Models.EntityData;
 
 namespace RESTGIYDIRME.Models.EntityConfigurations
 {
-    public class PortfolioConfigurations : IEntityTypeConfiguration<Portfolio>
+    public class PortfolioConfigurations : IEntityTypeConfiguration<PortfolioEntity>
     {
-        public void Configure(EntityTypeBuilder<Portfolio> builder)
+        public void Configure(EntityTypeBuilder<PortfolioEntity> builder)
         {
             builder.Property(x => x.GalleryImage)
                 .IsRequired(true);

@@ -2,8 +2,8 @@
 
 namespace RESTGIYDIRME.Models.ResponseObjects
 {
-    public class ReferanceResponse
+    public class ReferanceResponseModel
     {
-        public List<Referance> Referances { get; set; }
+        public List<ReferanceEntity> Referances { get; set; }
     }
 }

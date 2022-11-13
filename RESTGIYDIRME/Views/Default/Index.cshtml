@@ -1,11 +1,11 @@
-﻿@model DefaultResponse
+﻿@model DefaultResponseModel
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@await Html.PartialAsync("/Views/Partials/_SliderPartial.cshtml")
+@await Html.PartialAsync("/Views/Partials/_SliderPartial.cshtml",Model.Sliders)
 
 <br />
 

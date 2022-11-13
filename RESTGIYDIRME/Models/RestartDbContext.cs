@@ -22,13 +22,13 @@ namespace RESTGIYDIRME.Models
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
-        public DbSet<Slider> Sliders { get; set; }
-        public DbSet<IndexInfo> IndexInfos { get; set; }
-        public DbSet<Portfolio> Portfolios { get; set; }
-        public DbSet<Team> Teams { get; set; }
-        public DbSet<About> Abouts { get; set; }
-        public DbSet<Contact> Contacts { get; set; }
-        public DbSet<Referance> Referances { get; set; }
-        public DbSet<PortfolioSlider> PortfolioSliders { get; set; }
+        public DbSet<SliderEntity> Sliders { get; set; }
+        public DbSet<IndexInfoEntity> IndexInfos { get; set; }
+        public DbSet<PortfolioEntity> Portfolios { get; set; }
+        public DbSet<TeamEntity> Teams { get; set; }
+        public DbSet<AboutEntity> Abouts { get; set; }
+        public DbSet<ContactEntity> Contacts { get; set; }
+        public DbSet<ReferanceEntity> Referances { get; set; }
+        public DbSet<PortfolioSliderEntity> PortfolioSliders { get; set; }
     }
 }

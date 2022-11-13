@@ -1,6 +1,6 @@
 ﻿namespace RESTGIYDIRME.Models.EntityData
 {
-    public class Contact
+    public class ContactEntity
     {
         public int Id { get; set; }
         public string Name { get; set; }

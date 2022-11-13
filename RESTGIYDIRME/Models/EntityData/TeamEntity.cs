@@ -2,7 +2,7 @@
 
 namespace RESTGIYDIRME.Models.EntityData
 {
-    public class Team
+    public class TeamEntity
     {
         public int Id { get; set; }
         public string Title { get; set; }

@@ -1,8 +1,7 @@
-﻿@model DefaultResponse
-
+﻿@model List<SliderEntity>
 <div id="main_flexslider" class="flexslider">
     <ul class="slides">
-        @foreach (var item in Model.Sliders)
+        @foreach (var item in Model)
         {
             <li class="item" style="background-image: url(@item.Image)">
                 <div class="container">

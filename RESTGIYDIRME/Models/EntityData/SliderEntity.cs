@@ -1,6 +1,6 @@
 ﻿namespace RESTGIYDIRME.Models.EntityData
 {
-    public class Slider
+    public class SliderEntity
     {
         public int Id { get; set; }
         public string Image { get; set; }
